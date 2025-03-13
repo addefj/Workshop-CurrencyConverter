@@ -17,7 +17,7 @@ public class ExchangeUI {
         System.out.println("Please enter your choice:");
     }
 
-    public static void displayInvalidOption(){
+    public static void displayInvalidOptionMessage(){
         System.out.println("That is not a valid option, Try again.");
         System.out.println(); //empty line for readability
     }
@@ -26,36 +26,12 @@ public class ExchangeUI {
         System.out.println("You chose to Exit, Welcome back another time");
     }
 
-    public static void displaySekToUsdMenu() {
+    public static void displayExchangeRateMenu(String currencyIn, String currencyOut, double exchangeRate) {
         System.out.println("-----------------------------------------");
-        System.out.println("You chose to exchange SEK for USD");
-        System.out.println("Exchange rate: 1 SEK = " + ExchangeRates.SEK_TO_USD);
+        System.out.println("You chose to exchange " + currencyIn + " for " + currencyOut);
+        System.out.println("Exchange rate: 1 " + currencyIn + " = " + exchangeRate);
         System.out.println("------------------------------------------");
-        System.out.println("Enter amount of SEK to exchange:");
-    }
-
-    public static void displayUsdToSekMenu() {
-        System.out.println("------------------------------------------");
-        System.out.println("You chose to exchange USD for SEK");
-        System.out.println("Exchange rate: 1 USD = " + ExchangeRates.USD_TO_SEK);
-        System.out.println("------------------------------------------");
-        System.out.println("Enter amount of USD to exchange:");
-    }
-
-    public static void displaySekToEuroMenu() {
-        System.out.println("------------------------------------------");
-        System.out.println("You chose to exchange SEK for EURO");
-        System.out.println("Exchange rate: 1 SEK = " + ExchangeRates.SEK_TO_EURO);
-        System.out.println("------------------------------------------");
-        System.out.println("Enter amount of SEK to exchange:");
-    }
-
-    public static void displayEuroToSekMenu() {
-        System.out.println("------------------------------------------");
-        System.out.println("You chose to exchange EURO for SEK");
-        System.out.println("Exchange rate: 1 EURO = " + ExchangeRates.EURO_TO_SEK);
-        System.out.println("------------------------------------------");
-        System.out.println("Enter amount of EURO to exchange:");
+        System.out.println("Enter amount of " + currencyIn + " to exchange:");
     }
 
     public static void displayExchangeResult(double amountIn, double amountOut, String currencyIn, String currencyOut) {

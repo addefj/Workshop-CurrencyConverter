@@ -26,12 +26,12 @@ step 5. create method for displaying result formatted
                     ExchangeUI.displayExitMessage();
                     System.exit(0);
                 } else if (userChoice < 0 || userChoice > 4) {
-                    ExchangeUI.displayInvalidOption();
+                    ExchangeUI.displayInvalidOptionMessage();
                 } else {
                     isValid = true; //exit the loop to continue with the next step
                 }
             } catch (NumberFormatException e) {
-                ExchangeUI.displayInvalidOption();
+                ExchangeUI.displayInvalidOptionMessage();
             }
         }
 
