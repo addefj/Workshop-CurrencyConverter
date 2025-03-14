@@ -2,6 +2,7 @@ package se.lexicon;
 
 public class ExchangeUI {
 
+    //main menu message
     public static void printMenu() {
         System.out.println("=========================================");
         System.out.println("Welcome to my Currency Exchange App:");
@@ -17,15 +18,24 @@ public class ExchangeUI {
         System.out.println("Please enter your choice:");
     }
 
+    //message to display in case of invalid menu option input
     public static void displayInvalidOptionMessage(){
         System.out.println("That is not a valid option, Try again.");
         System.out.println(); //empty line for readability
     }
 
+    //message to display in case of invalid amount input
+    public static void displayInvalidAmountMessage(){
+        System.out.println("That is not a valid amount, Try again.");
+        System.out.println(); //empty line for readability
+    }
+
+    //message to display if user choses to exit app
     public static void displayExitMessage() {
         System.out.println("You chose to Exit, Welcome back another time");
     }
 
+    //exchange rate menu to display after user chooses option in main menu
     public static void displayExchangeRateMenu(String currencyIn, String currencyOut, double exchangeRate) {
         System.out.println("-----------------------------------------");
         System.out.println("You chose to exchange " + currencyIn + " for " + currencyOut);
@@ -34,8 +44,9 @@ public class ExchangeUI {
         System.out.println("Enter amount of " + currencyIn + " to exchange:");
     }
 
+    //message to display as result after exchange is performed
     public static void displayExchangeResult(double amountIn, double amountOut, String currencyIn, String currencyOut) {
-        System.out.println("You exchanged " + amountIn + " " + currencyIn + " to " + amountOut + " " + currencyOut);
+        System.out.printf("You exchanged: %.2f %s to: %.2f %s", amountIn, currencyIn, amountOut, currencyOut);
     }
 }
 
