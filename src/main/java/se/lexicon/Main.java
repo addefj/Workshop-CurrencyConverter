@@ -21,16 +21,16 @@ step 5. Optional improvements
     5.1 option to return to main menu
  */
 
-        mainMenu(); //go to main menu
+        mainMenu(); //go to main menu method
     }
 
     public static void mainMenu() {
-        Scanner userInput = new Scanner(System.in);
+        Scanner userInput = new Scanner(System.in); //create scanner object for reading user input
 
         while (true) {
-            ExchangeUI.displayMainMenu(); //call method for printing menu
+            ExchangeUI.displayMainMenu(); //call method for displaying main menu
             String userInputString = userInput.next();
-            int userChoice = UserInputValidation.isMenuInputValid(userInputString); //ask user for menu choice and validate the input
+            int userChoice = UserInputValidation.isMainMenuInputValid(userInputString); //validate user input
             if (userChoice == 0) {
                 ExchangeUI.displayExitMessage(); //display exit message
                 System.exit(0);

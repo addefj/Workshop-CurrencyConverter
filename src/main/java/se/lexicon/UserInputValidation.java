@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class UserInputValidation {
 
-    public static int isMenuInputValid(String userInputString) {
+    public static int isMainMenuInputValid(String userInputString) {
 
         try { // Check if the input can be converted to an integer
             return Integer.parseInt(userInputString); // Store the user input into a string
@@ -17,7 +17,7 @@ public class UserInputValidation {
     }
 
     //method for reading user input for amount and validate
-    public static double amountToAdd(String currencyIn, String currencyOut, double exchangeRate) {
+    public static double amountToExchange(String currencyIn, String currencyOut, double exchangeRate) {
 
         Scanner userInput = new Scanner(System.in); //create scanner object for user input
 
