@@ -1,5 +1,7 @@
 package se.lexicon;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
        /*
@@ -19,7 +21,26 @@ step 5. Optional improvements
     5.1 option to return to main menu
  */
 
-        int userChoice = UserInputValidation.isMenuInputValid(); //ask user for menu choice and validate the input
-        ExchangeOperation.exchangeCurrency(userChoice); //call method for exchanging currency
+        mainMenu(); //go to main menu
+    }
+
+    public static void mainMenu() {
+        Scanner userInput = new Scanner(System.in);
+
+        while (true) {
+            ExchangeUI.displayMainMenu(); //call method for printing menu
+            String userInputString = userInput.next();
+            int userChoice = UserInputValidation.isMenuInputValid(userInputString); //ask user for menu choice and validate the input
+            if (userChoice == 0) {
+                ExchangeUI.displayExitMessage(); //display exit message
+                System.exit(0);
+            } else if (userChoice < 0 || userChoice > 4) {
+                ExchangeUI.displayInvalidOptionMessage(); //display message in case of invalid user entry
+            } else {
+                ExchangeOperation.exchangeCurrency(userChoice); //call method for exchanging currency
+                System.exit(0); //end of program
+            }
+
+        }
     }
 }
