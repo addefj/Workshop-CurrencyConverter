@@ -3,7 +3,7 @@ package se.lexicon;
 public class ExchangeUI {
 
     //main menu message
-    public static void printMenu() {
+    public static void displayMainMenu() {
         System.out.println("=========================================");
         System.out.println("Welcome to my Currency Exchange App:");
         System.out.println("-----------------------------------------");
@@ -40,7 +40,7 @@ public class ExchangeUI {
         System.out.println("-----------------------------------------");
         System.out.println("You chose to exchange " + currencyIn + " for " + currencyOut);
         System.out.println("Exchange rate: 1 " + currencyIn + " = " + exchangeRate);
-        System.out.println("Enter 0 to go back to main menu");
+        System.out.println("Enter 0 to go back the to main menu");
         System.out.println("------------------------------------------");
         System.out.println("Enter amount of " + currencyIn + " to exchange:");
     }

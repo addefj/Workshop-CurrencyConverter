@@ -7,11 +7,9 @@ public class UserInputValidation {
 
     public static int isMenuInputValid() {
         Scanner userInput = new Scanner(System.in); //create scanner object for user input
-        //int userChoice = 0;
-        //boolean isValid = false;
 
         while (true) { //continue running until user enters a valid input
-            ExchangeUI.printMenu(); //call method for printing menu
+            ExchangeUI.displayMainMenu(); //call method for printing menu
             try { // Check if the input can be converted to an integer
                 int userChoice = userInput.nextInt(); // Store the user input into a string
                 if (userChoice == 0) {
